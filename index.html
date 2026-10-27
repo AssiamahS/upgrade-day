@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#111111">
+  <title>Upgrade Day</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <div id="hud" class="hidden">
+    <div class="hud-left"><span id="clock"></span></div>
+    <div class="hud-right"><span id="queue"></span><span id="rating"></span><span id="money"></span></div>
+    <div id="crosshair"></div>
+    <div id="prompt"></div>
+    <div id="toasts"></div>
+  </div>
+
+  <div id="stick"><div id="knob"></div></div>
+  <div id="touchBtns"><button id="btnAck">F<br><small>Ack</small></button><button id="btnHelp">E<br><small>Help</small></button></div>
+
+  <div id="tablet" class="hidden"></div>
+
+  <div id="menu">
+    <div class="panel">
+      <div class="brand">horizon<span>✓</span></div>
+      <h1>Upgrade Day</h1>
+      <p class="sub">A wireless store sales simulator. Greet people, find out what they need, put the right phone in their hand — and don't let anyone walk out ignored.</p>
+      <label class="namefield">Your name on the badge <input id="name" maxlength="16"></label>
+      <button class="primary wide" id="startBtn">Open the store</button>
+      <div id="menuStats"></div>
+      <div class="howto">
+        <div><b>WASD</b> walk · <b>Mouse</b> look · <b>Shift</b> hustle</div>
+        <div><b>E</b> help a customer · <b>F</b> "I'll be right with you"</div>
+        <div><b>Esc</b> step away from the tablet (they'll wait — not forever)</div>
+        <div class="flow">Greet → Discover → Recommend → Handle objection → Add-ons → Close</div>
+      </div>
+      <button class="link" id="resetBtn">Reset save</button>
+    </div>
+  </div>
+
+  <div id="report" class="hidden"></div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
